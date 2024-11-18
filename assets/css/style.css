@@ -1,0 +1,67 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  h1, h2, p {
+    margin: 0;
+    padding: 1rem;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: ;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar nav ul li {
+    margin-left: 1rem;
+  }
+  
+  .navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Home Page */
+  .home-page, .profile-page {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .home-page h2, .profile-page h2 {
+    font-size: 2rem;
+    color: #c800ff;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #202020;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  

@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'inter';
+  font-family: 'inter', sans-serif;
   box-sizing: border-box;
 }
 
@@ -15,26 +15,15 @@
   z-index: 0;
 }
 
-.background img {
-  position: fixed;
-  bottom: 0;
-  left: 30%;
-  transform: translateX(-50%);
-  z-index: 100;
-  width: 30%;
-  max-width: 100%;
-  pointer-events: none;
-}
-
 /* App Container */
 .main {
   background: #ffffff30;
-  width: 85%;
-  margin: 100px auto 0;
+  width: 90%;
+  margin: 2% auto 0;
   border-radius: 10px;
   padding: 30px;
   text-align: center;
-  height: 75%;
+  height: 91%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(5px);
@@ -59,7 +48,8 @@
   width: 51%;
   margin-right: 8%;
   color: #fff;
-  margin-top: 7%;
+  margin-top: 10%;
+  font-size: 30px;
 }
 
 .inhoud h2 {
@@ -71,6 +61,7 @@
 .inhoud p {
   margin-top: 10px;
   padding: 1%;
+  font-size: 25px;
 }
 
 .inhoud a {
@@ -90,17 +81,17 @@
 
 #readmore {
   padding: 3px;
-  font-size: 15px;
+  font-size: 20px;
   border: none;
   color: #fff;
   border-radius: 5px;
-  background-color: #984EFF;
+  background-color: #c800ff;
   transition: all 0.3s;
 }
 
 #readmore:hover {
   background-color: #fff;
-  color: #984EFF;
+  color: #c800ff;
   cursor: pointer;
 }
 

@@ -16,8 +16,10 @@
             <h1 id="header">SkillBuddy</h1>
             <!-- Information -->
             <div class="inhoud">
+                <button onclick="changeLanguage('en')">English</button>
+                <button onclick="changeLanguage('ne')">Nederlands</button>
                 <h1>SkillBuddy</h1>
-                <p>Connect, learn, and grow with fellow Software Development students.</p>
+                <p id="standard">Connect, learn, and grow with fellow Software Development students.</p>
                 <button id="readmore" onclick="window.location.href='html/info.html'">Read More <i class="fa-solid fa-arrow-right" style="font-size: large;"></i></button>
             </div>
         </div>
@@ -36,5 +38,22 @@
             <div></div>
         </div>
     </div>
+    <script>
+        const translations = {
+            en: {
+                standard: "Connect, learn, and grow with fellow Software Development students.",
+                readmore: "Read More"
+            },
+            ne: {
+                standard: "Contact maken, leren en groeien met medestudenten Softwareontwikkeling.",
+                readmore: "Lees Meer"
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.getElementById('standard').innerText = translations[lang].standard;
+            document.getElementById('readmore').innerText = translations[lang].readmore;
+        }
+    </script>
 </body>
 </html>

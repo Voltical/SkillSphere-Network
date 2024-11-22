@@ -18,12 +18,18 @@
         <h1>SkillBuddy</h1>
         <p>Connect, learn, and grow with fellow Software Development students.</p>
 
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
-          Login
-        </button>
         <button id="readmore" onclick="window.location.href='html/info.html'">Read More <i class="fa-solid fa-arrow-right" style="font-size: large;"></i></button>
       </div>
     </div>
+  </div>
+
+  <div class="top-right-buttons">
+    <button ype="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+      Login
+    </button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#signupModal">
+      Sign Up
+    </button>
   </div>
 
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -34,20 +40,25 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="username" class="form-label">Username</label>
-              <input type="text" class="form-control" id="username" aria-describedby="usernameHelp">
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" id="password">
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-          </form>
-        </div>
+          </div>
         <div class="modal-footer">
           <a href="#">Forgot Password?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          </div>
+        <div class="modal-footer">
+          <p>Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></p>
         </div>
       </div>
     </div>

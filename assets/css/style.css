@@ -44,6 +44,12 @@
   text-align: center;
 }
 
+.top-right-buttons {
+  position: absolute;
+  top: 8%;
+  right: 5%;
+}
+
 /* Inhoud */
 .inhoud {
   padding: 20px 0;

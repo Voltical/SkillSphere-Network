@@ -116,3 +116,4 @@ This project is a modern social network platform designed to facilitate skill ex
 - Research thoroughly and verify answers from multiple sources.  
 - Take advantage of your mentors' expertise when in doubt.  
 - Focus on both functionality and user experience.  
+

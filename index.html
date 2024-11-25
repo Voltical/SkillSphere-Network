@@ -24,45 +24,8 @@
   </div>
 
   <div class="top-right-buttons">
-    <button type="button" class="btn btn-primary login" data-bs-toggle="modal" data-bs-target="#loginModal">
-      Login
-    </button>
-    <button type="button" class="btn btn-secondary sign-up" data-bs-toggle="modal" data-bs-target="#signupModal">
-      Sign Up
-    </button>
+    <button type="button" onclick="location.href = 'assets/php/auth.php'" class="btn btn-primary login"">Login</button>
+    <button type="button" class="btn btn-secondary sign-up">Sign Up</button>
   </div>
-
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="loginModalLabel">Login</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          </div>
-        <div class="modal-footer">
-          <a href="#">Forgot Password?</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          </div>
-        <div class="modal-footer">
-          <p>Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </body>
 </html>

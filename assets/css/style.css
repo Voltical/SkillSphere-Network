@@ -58,12 +58,28 @@
   font-size: 30px;
 }
 
-.login{
-  background-color: #e56a54;
+.login {
+  background-color: #e56a54 !important;
+  border: none !important;
+  font-weight: 600 !important;
 }
 
-.sign-up{
-  background-color: ;
+.sign-up {
+  background-color: #e5a854 !important;
+  border: none !important;
+  font-weight: 600 !important;
+}
+
+.login:hover {
+  background-color: #cc5f4a !important;
+  border: none !important;
+  font-weight: 600 !important;
+}
+
+.sign-up:hover {
+  background-color: #d2954a !important;
+  border: none !important;
+  font-weight: 600 !important;
 }
 
 .inhoud p {

@@ -10,7 +10,7 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: url(/assets/images/3.png);
+  background-image: url(../images/layered-waves-haikei.svg);
   background-size: cover;
   z-index: 0;
 }
@@ -94,13 +94,13 @@
   border: none;
   color: #fff;
   border-radius: 5px;
-  background-color: #ED654A;
+  background-color: #004f59;
   transition: all 0.3s;
 }
 
 #readmore:hover {
   background-color: #fff;
-  color: #ed654a;
+  color: #004f59;
   cursor: pointer;
 }
 
@@ -115,7 +115,7 @@
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: #ED654A; }
+  50% { border-color: #e56a54; }
 }
 
 .box div {

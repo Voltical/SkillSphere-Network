@@ -1,0 +1,10 @@
+/* Global */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Titillium Web', sans-serif;
+    background: url(../images/layered-waves-haikei.svg);
+}

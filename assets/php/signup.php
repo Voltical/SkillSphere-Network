@@ -81,7 +81,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <button type="submit">
         <i class="fas fa-sign-in-alt"></i> Sign Up
     </button>
-</form>
+
+    <p style="font-size:17px;">Have an account?<br><a href="login.php">Log in</a></p>
+
+        </form>
     </div>
 </body>
 </html>

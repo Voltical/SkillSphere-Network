@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
         // Prepared statement
-        $sql = "INSERT INTO users (fname, lname, email, password) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO user (fname, lname, email, password) VALUES (?, ?, ?, ?)";
         $data = array($firstname, $lastname, $email, $hashed_password);
 		$result = Database::getData($sql, $data);
     } else {
@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkillBuddy | Sign Up</title>
     <link rel="stylesheet" href="../css/auth.css">
+    <link rel="icon" href="../images/favicon-32x32-circle.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
@@ -42,8 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             </svg>
         </div>
         <form action="" method="POST" class="log-in" autocomplete="off"> 
-    <h4>We are <span>SkillBuddy!</span></h4>
-    <p>Welcome! Sign up to view and create posts!</p>
+    <h4>Welcome to <span>SkillBuddy!</span></h4>
+    <p>Welcome! Sign up to view and create new posts!</p>
 
     <div class="floating-label">
         <div class="icon">

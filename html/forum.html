@@ -3,29 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillBuddy</title>
-    <link rel="stylesheet" href="../assets/css/forum.css">
+    <title>My Forum</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>My Forum</h1>
+        <nav>
+            </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search questions">
+            <button>Search</button>
+        </div>
     </header>
 
     <main>
-        <section class="forum-section">
-            <h2>Latest Discussions</h2>
+        <section class="question-list">
+            <h2>Latest Questions</h2>
             <ul>
                 <li>
-                    <a href="#">
-                        <h3>Discussion 1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <h3>Discussion 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </a>
+                    <div class="question-info">
+                        <a href="#">
+                            <h3>How to implement a custom sorting algorithm in Python?</h3>
+                        </a>
+                        <p>python, algorithm, sorting</p>
+                        <span class="votes">5</span>
+                        <span class="answers">2</span>
+                        <span class="views">123</span>
+                    </div>
+                    <div class="user-info">
+                        <a href="#">
+                            <img src="user_avatar.jpg" alt="User Avatar">
+                            username
+                        </a>
+                        <span>asked 2 hours ago</span>
+                    </div>
                 </li>
                 </ul>
         </section>

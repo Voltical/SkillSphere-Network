@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
                 echo "<script>
                     alert('Login successful! Redirecting to dashboard...');
-                    window.location.href = 'dashboard.php';
+                    window.location.href = '../html/forum.html';
                 </script>";
                 exit();
             } else {

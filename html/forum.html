@@ -4,47 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Forum</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/css/forum.css">
 </head>
 <body>
     <header>
-        <h1>My Forum</h1>
         <nav>
-            </nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Questions</a></li>
+                <li><a href="#">Tags</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
         <div class="search-bar">
-            <input type="text" placeholder="Search questions">
+            <input type="text" placeholder="Search">
             <button>Search</button>
         </div>
     </header>
 
     <main>
         <section class="question-list">
-            <h2>Latest Questions</h2>
+            <h2>Recent Questions</h2>
             <ul>
                 <li>
-                    <div class="question-info">
-                        <a href="#">
-                            <h3>How to implement a custom sorting algorithm in Python?</h3>
-                        </a>
-                        <p>python, algorithm, sorting</p>
-                        <span class="votes">5</span>
-                        <span class="answers">2</span>
-                        <span class="views">123</span>
-                    </div>
-                    <div class="user-info">
-                        <a href="#">
-                            <img src="user_avatar.jpg" alt="User Avatar">
-                            username
-                        </a>
-                        <span>asked 2 hours ago</span>
-                    </div>
+                    <a href="#">
+                        <h3>How to center a div horizontally and vertically?</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <span class="tags">html, css, layout</span>
+                    </a>
                 </li>
                 </ul>
+        </section>
+
+        <section class="question-detail">
+            <h2>Question Details</h2>
+            <h3>How to center a div horizontally and vertically?</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+            <div class="answers">
+                <h4>Answers</h4>
+                <ul>
+                    <li>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <span class="user">John Doe</span>
+                        <span class="votes">5</span>
+                    </li>
+                    </ul>
+            </div>
+
+            <form id="commentForm">
+                <textarea id="commentText" placeholder="Enter your comment"></textarea>
+                <button type="submit">Submit</button>
+              </form>
+              
+              <div id="commentSection"></div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 My Forum</p>
+        <p>&copy; My Forum 2023</p>
     </footer>
 </body>
 </html>

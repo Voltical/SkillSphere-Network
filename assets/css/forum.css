@@ -1,81 +1,123 @@
-/* ... previous CSS ... */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
 
-.question-list {
-    list-style: none;
+header {
+    background-color: #004f59;
+    color: white;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #004f59;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #e56a54;
+}
+
+.search-bar {
+    float: right;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #e56a54;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+.question-list, .question-detail {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.question-list ul {
+    list-style-type: none;
     padding: 0;
 }
 
-.question-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+.question-list li {
+    margin-bottom: 20px;
 }
 
-.question-info h3 {
-    margin: 0;
+.question-list a {
+    text-decoration: none;
+    color: #004f59;
 }
 
-.question-info p {
-    font-size: 0.9em;
-    color: #888;
+.question-list a:hover {
+    color: #e56a54;
 }
 
-.user-info {
-    display: flex;
-    align-items: center;
+.question-detail .answers, .question-detail .ask-answer {
+    margin-top: 20px;
 }
 
-.user-info img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.votes, .answers, .views {
-    font-size: 0.8em;
-    color: #888;
-    margin-right: 10px;
-}
-
-/* ... previous CSS ... */
-
-.question-list {
-    list-style: none;
+.question-detail .answers ul {
+    list-style-type: none;
     padding: 0;
 }
 
-.question-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+.question-detail .answers li {
+    margin-bottom: 10px;
 }
 
-.question-info h3 {
-    margin: 0;
-}
-
-.question-info p {
-    font-size: 0.9em;
+.question-detail .answers .user, .question-detail .answers .votes {
     color: #888;
+    font-size: 12px;
 }
 
-.user-info {
-    display: flex;
-    align-items: center;
+.question-detail .ask-answer textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.user-info img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 10px;
+.question-detail .ask-answer button {
+    padding: 10px 20px;
+    background-color: #e56a54;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.votes, .answers, .views {
-    font-size: 0.8em;
-    color: #888;
-    margin-right: 10px;
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004f59;
+    color: white;
 }

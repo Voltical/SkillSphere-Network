@@ -17,8 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $_SESSION['user_id'] = $result[0]['id'];
             $_SESSION['user_name'] = $result[0]['fname'] . " " . $result[0]['lname'];
 
-            // Redirect to the dashboard or homepage
-            header("Location: dashboard.php");
+            // Show a success message and redirect
+            echo "<script>
+                alert('Login successful! Redirecting to your dashboard...');
+                window.location.href = 'dashboard.php';
+            </script>";
             exit();
         } else {
             $error_message = "Invalid email or password.";
@@ -37,6 +40,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <link rel="stylesheet" href="../css/auth.css">
     <link rel="icon" href="../images/favicon-32x32-circle.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+        .success-message {
+            color: green;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .error-message {
+            color: red;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
     <div class="session">
@@ -78,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 <i class="fas fa-sign-in-alt"></i> Log In
             </button>
 
-            <p>Don't have an account?<br><a href="signup.php">Sign Up</a></p>
+            <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
         </form>
     </div>
 </body>

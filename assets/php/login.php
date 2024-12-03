@@ -4,27 +4,33 @@ include("database.inc.php");
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $email = trim($_POST['email']);
-    $password = $_POST['password'];
+    $password = trim($_POST['password']);
 
     if (!empty($email) && !empty($password) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // Query to fetch user data by email
+        // SQL-query om gebruiker op basis van email te vinden
         $sql = "SELECT * FROM user WHERE email = ?";
         $data = array($email);
         $result = Database::getData($sql, $data);
 
-        if ($result && password_verify($password, $result[0]['password'])) {
-            // Login successful: Set session variables
-            $_SESSION['user_id'] = $result[0]['id'];
-            $_SESSION['user_name'] = $result[0]['fname'] . " " . $result[0]['lname'];
+        if ($result) {
+            // Gebruiker gevonden, wachtwoord verifiëren
+            if (password_verify($password, $result[0]['password'])) {
+                // Login succesvol: Sessies instellen en doorsturen
+                $_SESSION['user_id'] = $result[0]['id'];
+                $_SESSION['user_name'] = $result[0]['fname'] . " " . $result[0]['lname'];
 
-            // Show a success message and redirect
-            echo "<script>
-                alert('Login successful! Redirecting to your dashboard...');
-                window.location.href = 'dashboard.php';
-            </script>";
-            exit();
+                echo "<script>
+                    alert('Login successful! Redirecting to dashboard...');
+                    window.location.href = 'dashboard.php';
+                </script>";
+                exit();
+            } else {
+                // Ongeldig wachtwoord
+                $error_message = "Invalid email or password.";
+            }
         } else {
-            $error_message = "Invalid email or password.";
+            // Geen gebruiker gevonden
+            $error_message = "No account found with this email.";
         }
     } else {
         $error_message = "Please enter a valid email and password.";

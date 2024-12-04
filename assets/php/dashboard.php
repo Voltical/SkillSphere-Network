@@ -39,17 +39,18 @@ if (!empty($result)) {
     <link rel="icon" href="../images/favicon-32x32-circle.png">
 </head>
 <body>
-    <div class="dashboard-container">
-        <h1>Welcome to your Dashboard, <?php echo htmlspecialchars($username); ?>!</h1>
+	<div class="background">
+    	<div class="dashboard-container">
+        	<h1>Welcome to your Dashboard, <?php echo htmlspecialchars($username); ?>!</h1>
 
-        <div class="profile-picture">
-            <?php
-            if ($user['profile_picture']) {
-                echo "<img src='" . htmlspecialchars($user['profile_picture']) . "' alt='Profile Picture' />";
-            } else {
-                echo "<img src='assets/images/jp_balkenende.jpg' alt='Default Profile Picture' />";
-            }
-            ?>
+        		<div class="profile-picture">
+           		 <?php
+           		 if ($user['profile_picture']) {
+          	      echo "<img src='" . htmlspecialchars($user['profile_picture']) . "' alt='Profile Picture' />";
+          	 	 } else {
+          	     echo "<img src='../images/jp_balkenende.jpg' alt='Default Profile Picture' />";
+          		 }
+          		 ?>
         </div>
         
         <div class="dashboard-details">
@@ -63,5 +64,6 @@ if (!empty($result)) {
             <a href="logout.php">Logout</a>
         </div>
     </div>
+	</div>
 </body>
 </html>

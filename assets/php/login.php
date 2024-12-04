@@ -9,21 +9,25 @@ function checkPost() {
 		$_POST[$key] = htmlentities(trim(strip_tags($value)));
 	}
 }
+echo "start";
+print_r($_POST);
 
-
-if ($_SERVER['REQUEST_METHOD'] == "post" && isset($_POST['frmLogin'])) {
+if (isset($_POST['frmLogin'])) {
+	echo 2;
 	checkPost();
 
     $email = trim($_POST['email']);
     $password = $_POST['password'];
 
     if (!empty($email) && !empty($password)) {
+		echo 3;
         // Prepared statement om de gebruiker op te halen
         $sql = "SELECT * FROM user WHERE email = ?";
         $data = array($email);
         $result = Database::getData($sql, $data);
 print_r($result);
         if (!empty($result)) {
+			echo 4;
             // Haal de opgeslagen hash op
             $hashed_password_from_db = $result[0]['password'];
 
@@ -90,6 +94,9 @@ print_r($result);
             <button type="submit">
                 <i class="fas fa-sign-in-alt"></i> Login
             </button>
+			
+			<p>Don't have an account?<br><a href="signup.php">Sign Up</a></p>
+			
         </form>
     </div>
 </body>

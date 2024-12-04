@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 <i class="fas fa-sign-in-alt"></i> Log In
             </button>
 
-            <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
+            <p>Don't have an account?<br><a href="signup.php">Sign Up</a></p>
         </form>
     </div>
 </body>

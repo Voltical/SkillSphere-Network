@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     if (!empty($firstname) && !empty($lastname) && filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($password)) {
         // Wachtwoord hashen
-        $hashed_password = password_hash($password, PASSWORD_BCRYPT);
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         // Prepared statement
         $sql = "INSERT INTO user (fname, lname, email, password) VALUES (?, ?, ?, ?)";

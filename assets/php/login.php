@@ -1,11 +1,14 @@
 <?php
 session_start();
 include("database.inc.php");
+
+
 function checkPost() {
 	foreach($_POST as $key => $value) {
 		$_POST[$key] = htmlentities(trim(strip_tags($value)));
 	}
 }
+
 if (isset($_POST['frmLogin'])) {
 	echo 2;
 	checkPost();
@@ -22,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         if (!empty($result)) {
 			echo 4;
             $hashed_password_from_db = $result[0]['password'];
+
             var_dump($password);
             var_dump($hashed_password_from_db);
 

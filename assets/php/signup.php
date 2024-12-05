@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $_SESSION['user'] = $email;
 
             // Redirect to dashboard or another page
-            header("Location: dashboard.php");
+            header("Location: profile.php");
             exit(); // Always exit after a redirect to stop further script execution
         } else {
             echo "<script type='text/javascript'>alert('Er is een fout opgetreden. Probeer het opnieuw.');</script>";

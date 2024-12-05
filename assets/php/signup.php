@@ -15,11 +15,21 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         // Prepared statement
         $sql = "INSERT INTO user (fname, lname, email, password) VALUES (?, ?, ?, ?)";
         $data = array($firstname, $lastname, $email, $hashed_password);
-		$result = Database::getData($sql, $data);
+        $result = Database::getData($sql, $data);
+
+        if ($result) {
+            // Optional: Set session or success message
+            $_SESSION['user'] = $email;
+
+            // Redirect to dashboard or another page
+            header("Location: dashboard.php");
+            exit(); // Always exit after a redirect to stop further script execution
+        } else {
+            echo "<script type='text/javascript'>alert('Er is een fout opgetreden. Probeer het opnieuw.');</script>";
+        }
     } else {
         echo "<script type='text/javascript'>alert('Voer geldige informatie in.');</script>";
     }
-		
 }
 ?>
 <!DOCTYPE html>

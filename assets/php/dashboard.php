@@ -37,20 +37,6 @@ if (!empty($result)) {
     $profile_picture = '../images/jp_balkenende.jpg';
 }
 
-function getLocation() {
-    $ip = $_SERVER['REMOTE_ADDR']; // IP-adres van de gebruiker
-
-    // Gebruik een externe service, zoals ip-api.com
-    $response = file_get_contents("http://ip-api.com/json/{$ip}");
-    $data = json_decode($response, true);
-
-    if ($data['status'] === 'success') {
-        return $data['city'] . ', ' . $data['country']; // Stad en land
-    }
-
-    return 'Unknown Location'; // Standaardwaarde als de locatie niet kan worden bepaald
-}
-
 // Update profile details
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $updated_bio = $_POST['bio'];

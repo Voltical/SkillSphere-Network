@@ -96,7 +96,7 @@ if (!empty($result)) {
             <li><a href="#">Work</a></li>
             <li><a href="#">Private</a></li>
             <li><a href="#">Coding</a></li>
-            <li><a href="#">Gardening</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#">School</a></li>
           </div>
         </ul>

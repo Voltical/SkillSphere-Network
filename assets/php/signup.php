@@ -13,20 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         $sql = "INSERT INTO user (fname, lname, email, password) VALUES (?, ?, ?, ?)";
-<<<<<<< Updated upstream
-        $data = array($firstname, $lastname, $email, $hashed_password);
-        $result = Database::getData($sql, $data);
-
-        if ($result) {
-            // Optional: Set session or success message
-            $_SESSION['user'] = $email;
-
-            // Redirect to dashboard or another page
-            header("Location: profile.php");
-            exit(); // Always exit after a redirect to stop further script execution
-        } else {
-            echo "<script type='text/javascript'>alert('Er is een fout opgetreden. Probeer het opnieuw.');</script>";
-=======
         $data = [$firstname, $lastname, $email, $hashed_password];
 
         $result = Database::getData($sql, $data);
@@ -37,7 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             exit;
         } else {
             echo "<script type='text/javascript'>alert('Registration failed. Please try again.');</script>";
->>>>>>> Stashed changes
         }
     } else {
         echo "<script type='text/javascript'>alert('Voer geldige informatie in.');</script>";

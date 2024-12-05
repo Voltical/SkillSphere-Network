@@ -54,9 +54,6 @@ print_r($result);
         echo "<p style='color:red;'>Vul alstublieft een email en wachtwoord in.</p>";
     }
 }
-if (isset($_GET['signup']) && $_GET['signup'] === 'success') {
-    echo "<div class='session'><p>Account Succesvol aangemaakt. Je kan nu inloggen!</div>";
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,6 +78,11 @@ if (isset($_GET['signup']) && $_GET['signup'] === 'success') {
         <form action="" method="POST" class="log-in" autocomplete="off"> 
     <h4>Welcome back to <span>SkillBuddy!</span></h4>
     <p>Log in to access your account.</p>
+    <?php
+    if (isset($_GET['signup']) && $_GET['signup'] === 'success') {
+        echo "<div class='session'><p>Account Succesvol aangemaakt. Je kan nu inloggen!</div>";
+    }
+    ?>
 
     <div class="floating-label">
         <div class="icon">

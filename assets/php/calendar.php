@@ -46,6 +46,7 @@ if (!empty($result)) {
   <title>Calendar</title>
   <link rel="stylesheet" href="../css/home.css">
   <script type="text/javascript" src="../js/app.js" defer></script>
+  <link rel="icon" href="../assets/images/favicon-32x32-circle.png">
 </head>
 <body>
   <nav id="sidebar">

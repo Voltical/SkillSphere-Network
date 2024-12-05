@@ -38,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <link rel="stylesheet" href="../css/auth.css">
     <link rel="icon" href="../images/favicon-32x32-circle.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="icon" href="../assets/images/favicon-32x32-circle.png">
 </head>
 <body>
     <div class="session">

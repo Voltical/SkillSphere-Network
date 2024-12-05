@@ -59,6 +59,7 @@ if (!empty($result)) {
   <link rel="stylesheet" href="../css/home.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <script type="text/javascript" src="../js/app.js" defer></script>
+  <link rel="icon" href="../assets/images/favicon-32x32-circle.png">
 </head>
 <body>
   <nav id="sidebar">

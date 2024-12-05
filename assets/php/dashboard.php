@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="../css/dashboard.css">
 
     <!-- Favicon -->
-    <link rel="icon" href="../assets/images/favicon-32x32-circle.png">
+    <link rel="icon" href="../images/favicon-32x32-circle.png">
 
     <!-- FontAwesome 5 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">

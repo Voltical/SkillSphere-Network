@@ -146,9 +146,14 @@ main p{
 
 .edit {
   position: absolute;
-  color: #e7e7e8;
+  color: #FFF;
   right: 14%;
   width: 40%;
+}
+
+.logout {
+  position: absolute;
+  color: #FFF;
 }
 
 @media(max-width: 800px){

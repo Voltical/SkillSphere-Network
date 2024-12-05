@@ -45,7 +45,7 @@ if (!empty($result)) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | SkillBuddy</title>
   <link rel="stylesheet" href="../css/home.css">
-  <script type="text/javascript" src="app.js" defer></script>
+  <script type="text/javascript" src="../js/app.js" defer></script>
 </head>
 <body>
   <nav id="sidebar">
@@ -76,9 +76,9 @@ if (!empty($result)) {
         </button>
         <ul class="sub-menu">
           <div>
-            <li><a href="#">Folder</a></li>
-            <li><a href="#">Document</a></li>
-            <li><a href="#">Project</a></li>
+            <li><a href="#">Post</a></li>
+            <li><a href="#">Guide</a></li>
+            <li><a href="#">Workspace</a></li>
           </div>
         </ul>
       </li>

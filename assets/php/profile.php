@@ -89,9 +89,9 @@ if (!empty($result)) {
         </button>
         <ul class="sub-menu">
           <div>
-            <li><a href="#">Folder</a></li>
-            <li><a href="#">Document</a></li>
-            <li><a href="#">Project</a></li>
+            <li><a href="#">Post</a></li>
+            <li><a href="#">Guide</a></li>
+            <li><a href="#">Workspace</a></li>
           </div>
         </ul>
       </li>
@@ -130,7 +130,6 @@ if (!empty($result)) {
     <img src="<?php echo $profile_picture; ?>" alt="Profile Picture" width="100" height="100">
       <h2>Profile</h2>
       <div class="main">
-        <h2>IDENTITY</h2>
         <div class="card">
             <div class="card-body">
                 <i class="fa fa-pen fa-xs edit"></i>
@@ -154,33 +153,31 @@ if (!empty($result)) {
                         <tr>
                             <td>Address</td>
                             <td>:</td>
-                            <td>Bali, Indonesia</td>
+                            <td> Netherlands, Heerlen</td>
                         </tr>
                         <tr>
                             <td>Hobbies</td>
                             <td>:</td>
-                            <td>Diving, Reading Book</td>
+                            <td> Diving, Reading Book</td>
                         </tr>
                         <tr>
                             <td>Job</td>
                             <td>:</td>
-                            <td>Web Developer</td>
+                            <td> Web Developer</td>
                         </tr>
                         <tr>
                             <td>Skill</td>
                             <td>:</td>
-                            <td>PHP, HTML, CSS, Java</td>
+                            <td> PHP, HTML, CSS, Java</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
       <p></p>
-      <li>
-        <a href="logout.php">
+        <a class="logout" href="logout.php">
           <i class="fa fa-sign-out-alt fa-2x"></i>
         </a>
-      </li>
     </div>
   </main>
 </body>

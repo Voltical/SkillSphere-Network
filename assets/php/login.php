@@ -1,17 +1,11 @@
 <?php
 session_start();
 include("database.inc.php");
-
-print_r($_SESSION);
-
 function checkPost() {
 	foreach($_POST as $key => $value) {
 		$_POST[$key] = htmlentities(trim(strip_tags($value)));
 	}
 }
-echo "start";
-print_r($_POST);
-
 if (isset($_POST['frmLogin'])) {
 	echo 2;
 	checkPost();
@@ -22,32 +16,23 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     if (!empty($email) && !empty($password)) {
 		echo 3;
-        // Prepared statement om de gebruiker op te halen
         $sql = "SELECT * FROM user WHERE email = ?";
         $data = array($email);
         $result = Database::getData($sql, $data);
-print_r($result);
         if (!empty($result)) {
 			echo 4;
-            // Haal de opgeslagen hash op
             $hashed_password_from_db = $result[0]['password'];
-
-            // Debugging: Toon het wachtwoord en de opgeslagen hash
             var_dump($password);
             var_dump($hashed_password_from_db);
 
-            // Verifieer het wachtwoord
             if (password_verify($password, $hashed_password_from_db)) {
-                // Wachtwoord is correct
                 $_SESSION['user_id'] = $result[0]['id'];
-                header("Location: profile.php"); // Redirect naar profile
+                header("Location: profile.php");
                 exit();
             } else {
-                // Wachtwoord is niet correct
                 echo "<p style='color:red;'>Ongeldig wachtwoord.</p>";
             }
         } else {
-            // Geen gebruiker gevonden
             echo "<p style='color:red;'>Ongeldige email of wachtwoord.</p>";
         }
     } else {
@@ -66,9 +51,22 @@ print_r($result);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
+<style>
+    .success-message {
+        color: green;
+        font-weight: bold;
+        text-align: center;
+        background-color: #eaf7ea;
+        border: 1px solid #d4e5d4;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 20px auto;
+        max-width: 400px;
+        font-size: 16px;
+    }
+</style>
     <div class="session">
         <div class="left">
-            <!-- Left Section (SVG or image) -->
             <?xml version="1.0" encoding="UTF-8"?>
             <svg enable-background="new 0 0 300 302.5" version="1.1" viewBox="0 0 300 302.5" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                 <style type="text/css">.st01{fill:#fff;}</style>
@@ -78,15 +76,10 @@ print_r($result);
         <form action="" method="POST" class="log-in" autocomplete="off"> 
     <h4>Welcome back to <span>SkillBuddy!</span></h4>
     <p>Log in to access your account.</p>
-    <?php
-    if (isset($_GET['signup']) && $_GET['signup'] === 'success') {
-        echo "<div class='session'><p>Account Succesvol aangemaakt. Je kan nu inloggen!</div>";
-    }
-    ?>
 
     <div class="floating-label">
         <div class="icon">
-            <i class="fas fa-envelope"></i> <!-- Email Icon -->
+            <i class="fas fa-envelope"></i>
         </div>
         <input placeholder="Email" type="email" name="email" id="email" autocomplete="off" required>
         <label for="email">Email:</label>
@@ -94,7 +87,7 @@ print_r($result);
 
     <div class="floating-label">
         <div class="icon">
-            <i class="fas fa-lock"></i> <!-- Password Icon -->
+            <i class="fas fa-lock"></i>
         </div>
         <input placeholder="Password" type="password" name="password" id="password" autocomplete="off" required>
         <label for="password">Password:</label>
@@ -103,6 +96,11 @@ print_r($result);
     <button type="submit">
         <i class="fas fa-sign-in-alt"></i> Log In
     </button>
+    <?php
+    if (isset($_GET['signup']) && $_GET['signup'] === 'success') {
+    echo "<div class='success-message'>Account succesvol aangemaakt! Je kan nu inloggen.</div>";
+    }
+    ?>
 
     <p style="font-size:17px;">Don't have an account yet?<br><a href="signup.php">Sign Up</a></p>
 

@@ -9,13 +9,17 @@
   }
   
   html, body {
-	height: 100vh;
-	width: 100vw;
 	margin: 0;
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
-	background: url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+	background-image: url(../images/layered-waves-haikei.svg);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background-size: cover;
+	z-index: 0;
   }
   
   h4 {
@@ -226,7 +230,7 @@
 	height: auto;
 	min-height: 100%;
 	position: relative;
-	background-image: url("../images/layered-waves-haikei.svg");
+	background: url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 	background-size: cover;
 	border-top-left-radius: 4px;
 	border-bottom-left-radius: 4px;

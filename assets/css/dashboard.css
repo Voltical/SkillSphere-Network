@@ -101,7 +101,8 @@ body {
 }
 
 .url a {
-    color: #ffffff;
+    font-weight: 600px;
+    color: #000000;
     display: block;
     font-size: 20px;
     margin: 10px 0;
@@ -110,6 +111,7 @@ body {
 }
 
 .url a:hover, .url .active {
+    font-weight: 600px;
     background-color: #e8f5ff;
     border-radius: 28px;
     color: #000000;

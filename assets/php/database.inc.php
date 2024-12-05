@@ -54,7 +54,7 @@
 			if($print === true) { print_r($result); }
 			return $result; // database query result
 		}
-
+		
 		public static function getNumrows() {
 			return database::$numrows;
 		}

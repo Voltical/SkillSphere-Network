@@ -1,4 +1,5 @@
 <?php
+// session start
 session_start();
 include("database.inc.php");
 
@@ -9,11 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $password = $_POST['password'];
 
     if (!empty($firstname) && !empty($lastname) && filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($password)) {
-        // Wachtwoord hashen
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        // Prepared statement
         $sql = "INSERT INTO user (fname, lname, email, password) VALUES (?, ?, ?, ?)";
+<<<<<<< Updated upstream
         $data = array($firstname, $lastname, $email, $hashed_password);
         $result = Database::getData($sql, $data);
 
@@ -26,6 +26,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             exit(); // Always exit after a redirect to stop further script execution
         } else {
             echo "<script type='text/javascript'>alert('Er is een fout opgetreden. Probeer het opnieuw.');</script>";
+=======
+        $data = [$firstname, $lastname, $email, $hashed_password];
+
+        $result = Database::getData($sql, $data);
+
+        // Check based on expected `getData` behavior
+        if ($result === true || $result > 0) { // Adjust as per Database::getData behavior
+            header("Location: login.php?signup=success");
+            exit;
+        } else {
+            echo "<script type='text/javascript'>alert('Registration failed. Please try again.');</script>";
+>>>>>>> Stashed changes
         }
     } else {
         echo "<script type='text/javascript'>alert('Voer geldige informatie in.');</script>";
@@ -92,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <i class="fas fa-sign-in-alt"></i> Sign Up
     </button>
 
-    <p style="font-size:17px;">Have an account?<br><a href="login.php">Log in</a></p>
+    <p style="font-size:17px;">Already have an account?<br><a href="login.php">Log In</a></p>
 
         </form>
     </div>

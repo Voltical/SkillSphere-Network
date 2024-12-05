@@ -39,7 +39,7 @@ print_r($result);
             if (password_verify($password, $hashed_password_from_db)) {
                 // Wachtwoord is correct
                 $_SESSION['user_id'] = $result[0]['id'];
-                header("Location: dashboard.php"); // Redirect naar dashboard
+                header("Location: profile.php"); // Redirect naar dashboard
                 exit();
             } else {
                 // Wachtwoord is niet correct

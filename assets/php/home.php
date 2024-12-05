@@ -128,20 +128,21 @@ if (!empty($result)) {
 
       <h2>Posts</h2>
       <div id="posts">
-        <?php
-        if (!empty($result)) {
-          foreach ($result as $post) {
+      <?php
+    if (!empty($result)) {
+        foreach ($result as $post) {
+            // Get the user's full name
             $post_user = ucfirst(strtolower($post['fname'])) . ' ' . ucfirst(strtolower($post['lname']));
+            // Output the post content
             echo "<div class='post'>
                     <p><strong>{$post_user}</strong> <span class='date'>{$post['created_at']}</span></p>
                     <p>{$post['content']}</p>
                   </div>";
         }
-        
-        } else {
-            echo "<p>No posts available.</p>";
-        }
-        ?>
+    } else {
+        echo "<p>No posts available.</p>";
+    }
+?>
       </div>
     </div>
   </main>

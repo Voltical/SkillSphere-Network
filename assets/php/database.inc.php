@@ -3,6 +3,7 @@
     Created 2019 by E.steens
     Edited 2020/2021/2022 by E. Steens and J. Wilmes
 *************************************************************/
+
 // database implemented abstract because only one implementation required
 abstract class Database {
     private static $result         = array();
@@ -47,17 +48,21 @@ abstract class Database {
         }
     }
 
+    // Get Data: Modified to handle fetching posts with user details
     public static function getData($p_sSql, $p_aData = "", $print = false) {
         // execute query on Mysql server
         // $p_sSQL contains MySql query string with parameter ?'s
         // $p_aData contains array with query parameters
         $pdo = Database::dbConnect();
         $stmt = $pdo->prepare($p_sSql); // prepare the query
+
         if (is_array($p_aData)) {       // add the data
             $stmt->execute($p_aData);   // execute the query
         } else {
             $stmt->execute();           // execute when no parameters
         }
+
+        // Fetch the results
         database::$numrows = $stmt->rowCount();
         $result = $stmt->fetchAll();    // get result
         database::$result = $result;    // set class var

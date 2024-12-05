@@ -47,6 +47,23 @@ if (!empty($result)) {
   <link rel="stylesheet" href="../css/home.css">
   <script type="text/javascript" src="../js/app.js" defer></script>
   <link rel="icon" href="../images/favicon-32x32-circle.png">
+
+              <!-- Essential JS 2 Calendar's dependent material theme -->
+              <link href="https://cdn.syncfusion.com/ej2/ej2-base/styles/material.css" rel="stylesheet" type="text/css" />
+            <link href="https://cdn.syncfusion.com/ej2/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css" />
+            <link href="https://cdn.syncfusion.com/ej2/ej2-calendars/styles/material.css" rel="stylesheet" type="text/css" />
+ 
+            <!-- Essential JS 2 all script -->
+            <!-- <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script> -->
+ 
+            <!-- Essential JS 2 Calendar's dependent scripts -->
+            <script src="https://cdn.syncfusion.com/ej2/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
+            <script src="https://cdn.syncfusion.com/ej2/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
+            <script src="https://cdn.syncfusion.com/ej2/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
+            <script src="https://cdn.syncfusion.com/ej2/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
+            <script src="https://cdn.syncfusion.com/ej2/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
+            <script src="https://cdn.syncfusion.com/ej2/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
+
 </head>
 <body>
   <nav id="sidebar">
@@ -114,10 +131,21 @@ if (!empty($result)) {
     </ul>
   </nav>
   <main>
+    <center>
     <div class="container">
       <h2>Calendar</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis porro iure quaerat aliquam! Optio dolorum in eum provident, facilis error repellendus excepturi enim dolor deleniti adipisci consectetur doloremque, unde maiores odit sapiente. Atque ab necessitatibus laboriosam consequatur eius similique, ex dolorum eum eaque sequi id veritatis voluptates perspiciatis, cupiditate pariatur.</p>
+      <br>
+      <!-- Add the HTML <div> element  -->
+     <div id="element"/>
+    <script>
+        // initialize the Calendar component
+        var calendar = new ej.calendars.Calendar();
+ 
+        // Render the initialized button.
+        calendar.appendTo('#element')
+    </script>
     </div>
+    </center>
   </main>
 </body>
 </html>

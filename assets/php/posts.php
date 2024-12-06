@@ -114,10 +114,13 @@ if (!empty($result)) {
     </ul>
   </nav>
   <main>
+    <center>
     <div class="container">
       <h2>Dashboard</h2>
+      <br>
       <img src="../images/image.png" alt="">
     </div>
+    </center>
   </main>
 </body>
 </html>
